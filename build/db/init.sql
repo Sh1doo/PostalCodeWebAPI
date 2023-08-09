@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS testdatabase;
+CREATE USER IF NOT EXISTS 'testuser'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON testdatabase.* TO 'testuser'@'%';
+USE testdatabase;
+CREATE TABLE IF NOT EXISTS `access_logs` (`id` INT AUTO_INCREMENT NOT NULL,`postal_code` VARCHAR(8) NOT NULL,`created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,PRIMARY KEY (`id`));
